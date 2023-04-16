@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="todolist.css">
+    <script src="https://kit.fontawesome.com/6ea801033e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Todo List</h1>
+            <button id="btn-add"><i class="fa-solid fa-plus"></i> Add new task</button>
+        </div>
+    </header>
+    <div class="tasks-list-container">
+        <section class="task-section prioritized">
+            <h2>Prioritized</h2>
+            <ul class="task-list"></ul>
+          </section>
+      
+          <section class="task-section todo">
+            <h2>To-Do</h2>
+            <ul class="task-list"></ul>
+          </section>
+      
+          <section class="task-section done">
+            <h2>Done</h2>
+            <ul class="task-list"></ul>
+          </section>      
+    </div>
+    <!-- create task popup -->
+    <div id="create-task-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="form-container">
+            <h2>Create Task</h2>
+            <form id="create-task-form">
+                <div class="fill-container">
+                    <label for="task-name">Task Name:</label>
+                    <input type="text" id="task-name" name="task-name" required>
+                </div>
+                <div class="fill-container">
+                    <label for="task-description">Task Description:</label>
+                    <input type="text" id="task-description" name="task-description" required>
+                </div>
+              <!-- choose type of task -->
+              <div class="fill-container">
+                <label for="task-type">Task Type:</label>
+                <select id="task-type" name="task-type">
+                  <option value="todo">To-Do</option>
+                  <option value="prioritized">Prioritized</option>
+                  <option value="done">Done</option>
+                </select>
+              </div>
+              <button id="submit-task" type="submit">Create</button>
+            </form>
+          </div>
+        </div>
+    </div>
+    <!-- edit task popup -->
+    <div id="edit-task-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="form-container">
+            <h2>Edit Task</h2>
+            <form id="edit-task-form">
+                <div class="fill-container">
+                    <label for="task-name">Task Name:</label>
+                    <input type="text" id="task-name" name="task-name" required>
+                </div>
+                <div class="fill-container">
+                    <label for="task-description">Task Description:</label>
+                    <input type="text" id="task-description" name="task-description" required>
+                </div>
+              <!-- choose type of task -->
+              <div class="fill-container">
+                <label for="task-type">Task Type:</label>
+                <select id="task-type" name="task-type">
+                  <option value="todo">To-Do</option>
+                  <option value="prioritized">Prioritized</option>
+                  <option value="done">Done</option>
+                </select>
+              </div>
+              <button id="edit-task" type="submit">Edit</button>
+            </form>
+          </div>
+        </div>
+    </div>
+    <script src="todolist.js"></script>
+</body>
+</html>
